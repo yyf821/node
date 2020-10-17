@@ -22,10 +22,6 @@ const schema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    age: {
-      desc: "The users's age.",
-      type: Number,
-    },
     gender: {
       desc: "user gender.",
       trim: true,
@@ -34,18 +30,12 @@ const schema = new mongoose.Schema(
       default: "Others",
       required: true,
     },
-    isActive: {
-      desc: "is Active.",
-      type: Boolean,
-      default: true,
-      required: true,
-    },
     userType: {
       desc: "user roles.",
       trim: true,
       type: String,
       enum: ["Admin", "User"],
-      default: "Admin",
+      default: "User",
       required: true,
     },
   },
